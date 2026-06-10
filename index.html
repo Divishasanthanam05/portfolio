@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Single Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#admin">Admin</a>
+            </div>
+            <button id="themeBtn">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Hi, I'm Mary 👋</h1>
+            <p>Full-Stack Developer & UI/UX Enthusiast</p>
+            <p>I craft digital solutions that combine cutting-edge technology with beautiful design.</p>
+            <div style="margin-top: 20px;">
+                <a href="#contact" class="btn-link">Contact Me →</a>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Passionate about Full Stack Web Development. Currently building scalable web applications, designing user interfaces, and learning frontend frameworks.</p>
+        </section>
+
+        <hr class="divider">
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML5 & CSS3 (Flexbox / Grid)</li>
+                <li>JavaScript (ES6+)</li>
+                <li>UI/UX Design Concepts</li>
+                <li>Responsive Web Layouts</li>
+            </ul>
+        </section>
+
+        <hr class="divider">
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="card">
+                <h3>Attendance Tracking System</h3>
+                <p>A web application built to log and monitor student or employee attendance efficiently.</p>
+            </div>
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>A clean, fully responsive single-page portfolio tracking user inquiries inside local browser storage.</p>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                
+                <input type="text" id="email" placeholder="Your Email" required>
+                <span id="emailError"></span>
+                
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <hr class="divider">
+
+        <section id="admin">
+            <h2>Admin Panel</h2>
+            
+            <div id="loginBox">
+                <p>Login to view contact form submissions.</p>
+                <input type="text" id="adminUser" placeholder="Username">
+                <input type="password" id="adminPass" placeholder="Password">
+                <button id="loginBtn">Login</button>
+                <p id="loginError" style="color: red; margin-top: 10px;"></p>
+            </div>
+
+            <div id="adminDashboard" class="hidden">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3>Submitted Messages</h3>
+                    <button id="logoutBtn">Logout</button>
+                </div>
+                <div id="messagesContainer"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mary. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
